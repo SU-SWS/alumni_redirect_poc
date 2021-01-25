@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "decanter-react": "git+ssh://git@github.com/SU-SWs/decanter-react.git",
+    "decanter-react": "https://git@github.com/SU-SWs/decanter-react.git",
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.11.0",
     "gatsby-plugin-postcss": "^3.6.0",
