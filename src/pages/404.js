@@ -1,14 +1,16 @@
-import * as React from "react"
+import React, { useEffect } from "react"
 import { navigate } from "gatsby"
 import { useLocation } from "@reach/router";
 import Layout from "../components/layout";
 
 // markup
 const NotFoundPage = () => {
+  const location = useLocation();
 
   // Get out of the url and keep track of specific utm parameters.
-  const location = useLocation();
-  navigate("https://alumni.stanford.edu/" + location.pathname + "?" + location.search);
+  useEffect(() => {
+    navigate("https://alumni.stanford.edu" + location.pathname + "?" + location.search);
+  });
 
   return (
     <Layout>
