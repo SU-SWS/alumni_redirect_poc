@@ -27,3 +27,13 @@
   from = "/api/*"
   to = ".netlify/functions/:splat"
   status = 200
+
+[[redirects]]
+  from = "/my-test-redirect"
+  to = "/page-1"
+  status = 301
+
+[[redirects]]
+  from = "/redirect/page-2"
+  to = "/page-2"
+  status = 301
