@@ -1,19 +1,15 @@
-import React from "react";
+import React, { useEffect} from "react";
 import { useLocation } from "@reach/router";
-import { Redirect } from "gatsby-link";
 import Layout from "../components/layout";
 
 // markup
 const NotFoundPage = () => {
   const location = useLocation();
-  const windowGlobal = typeof window !== 'undefined'
 
-  if (windowGlobal) {
-    let wherto = "https://alumni.stanford.edu" + location.pathname + "?" + location.search;
-    return (
-      <Redirect to={wherto} />
-    )
-  }
+  useEffect(() => {
+    let dest = "https://alumni.stanford.edu" + location.pathname + "?" + location.search
+    window.location = dest;
+  }, []);
 
   return (
     <Layout>
