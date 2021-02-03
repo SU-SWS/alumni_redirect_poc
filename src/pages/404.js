@@ -9,7 +9,7 @@ const NotFoundPage = () => {
   useEffect(() => {
     let dest = "https://alumni.stanford.edu" + location.pathname + "?" + location.search
     window.location = dest;
-  }, []);
+  }, [location]);
 
   return (
     <Layout>
