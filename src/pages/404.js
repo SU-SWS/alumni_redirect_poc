@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   const windowGlobal = typeof window !== 'undefined'
 
   if (windowGlobal) {
-    redirectTo("https://pg-dev.stanford.edu" + location.pathname + "?" + location.search);
+    window.location.replace("https://pg-dev.stanford.edu" + location.pathname + "?" + location.search);
   }
 
   return (
