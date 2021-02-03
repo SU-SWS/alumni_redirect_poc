@@ -6,17 +6,18 @@ import Layout from "../components/layout";
 const NotFoundPage = () => {
   const location = useLocation();
   const browser = typeof window !== "undefined" && window;
+  const dest = "https://alumni.stanford.edu" + location.pathname + location.search
 
   useLayoutEffect(() => {
-    let dest = "https://alumni.stanford.edu" + location.pathname + location.search
     window.location = dest;
-  }, [location]);
+  }, [location, dest]);
 
   return (
     browser && (
       <Layout>
         <h1>You have reached the 404 page.</h1>
         <p>This page should redirect you to pg-dev.stanford.edu.</p>
+        <script>window.location = {}</script>
       </Layout>
     )
   )
