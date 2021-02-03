@@ -8,7 +8,8 @@ const NotFoundPage = () => {
   const windowGlobal = typeof window !== 'undefined'
 
   if (windowGlobal) {
-    window.location.replace("https://alumni.stanford.edu" + location.pathname + "?" + location.search);
+    window.location.href("https://alumni.stanford.edu" + location.pathname + "?" + location.search);
+    return null
   }
 
   return (
