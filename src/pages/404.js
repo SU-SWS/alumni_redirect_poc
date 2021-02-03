@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   const browser = typeof window !== "undefined" && window;
 
   useLayoutEffect(() => {
-    let dest = "https://alumni.stanford.edu" + location.pathname + "?" + location.search
+    let dest = "https://alumni.stanford.edu" + location.pathname + location.search
     window.location = dest;
   }, [location]);
 
