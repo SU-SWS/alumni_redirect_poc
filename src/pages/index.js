@@ -24,14 +24,14 @@ const IndexPage = (props) => {
       <hr />
       <p>&nbsp;</p>
       <h3>Scenario #2</h3>
-      <p>The user goes to <Link to="/get/page/help/contact-us">https://alumni-redirect-poc.netlify.app/get/page/help/contact-us</Link></p>	
+      <p>The user goes to <a href="/get/page/help/contact-us">https://alumni-redirect-poc.netlify.app/get/page/help/contact-us</a></p>	
       <p><strong>Expected Result:</strong></p>
       <p>User is redirected to new contact page at https://alumni-redirect-poc.netlify.app/contact-us</p>
       <p><strong>Why?</strong></p>
       <p>We explicitly redirected this page because it exists on the new site.</p>
 
       <h3>Scenario #3</h3>
-      <p>The user goes to <Link to="/get/page/life-long-learning/book-overview">https://alumni-redirect-poc.netlify.app/get/page/life-long-learning/book-overview</Link></p>	
+      <p>The user goes to <a href="/get/page/life-long-learning/book-overview">https://alumni-redirect-poc.netlify.app/get/page/life-long-learning/book-overview</a></p>	
       <p><strong>Expected Result:</strong></p>
       <p>User is taken to a "under construction" page on the new alumni site</p>
       <p><strong>Why?</strong></p>
@@ -41,7 +41,7 @@ const IndexPage = (props) => {
       <hr />
       <p>&nbsp;</p>
       <h3>Scenario #4</h3>
-      <p>The user goes to <Link to="/get/page/directory/search">https://alumni-redirect-poc.netlify.app/get/page/directory/search</Link></p>	
+      <p>The user goes to <a href="/get/page/directory/search">https://alumni-redirect-poc.netlify.app/get/page/directory/search</a></p>	
       <p><strong>Expected Result:</strong></p>
       <p>User is asked to login if they haven't already. User is taken to the directory page with a legacy URL, e.g. https://pg-dev.stanford.edu/get/page/directory/search</p>
       <p><strong>Why?</strong></p>
@@ -50,7 +50,7 @@ const IndexPage = (props) => {
       <p>Ideal state would be that this is a pass through and user goes directly to new page; want to avoid flow where user logins to access a page that is not there.</p>
       
       <h3>Scenario #5</h3>
-      <p>The user goes to <Link to="/get/page/landing/campus_events/year">https://alumni-redirect-poc.netlify.app/get/page/landing/campus_events/year</Link> which is linked from an outside site and is a broken link</p>	
+      <p>The user goes to <a href="/get/page/landing/campus_events/year">https://alumni-redirect-poc.netlify.app/get/page/landing/campus_events/year</a> which is linked from an outside site and is a broken link</p>	
       <p><strong>Expected Result:</strong></p>
       <p>User is taken to the 404 page on the old site</p>
       <p><strong>Why?</strong></p>
@@ -60,7 +60,7 @@ const IndexPage = (props) => {
       <hr />
       <p>&nbsp;</p>
       <h3>Scenario #6</h3>
-      <p>Clicks on a link from a Marketo email (our primary means of contacting alums)<Link to="/get/page/subscriptions/signup?catID=1063&mkt_tok=eyJpIjoiWlRFMllqaGtOelpsTnpneiIsInQiOiJ2Tm05UkM3b2VMUHpwYTdsTWVIXC9MRTlYeTdYMFpHR29xcXI3TWczVUhManVQY2EwSDFYdHFqNEI5ZVNcL25HXC9vaEVZVTZwQjNDT0JYd2RlSlVQSFBwaVRrUlluZ3EzQXJSNUNPalNXUVQrT21lSTZTYzV1ZVNCXC91N2ZGaHQ0UHEifQ%3D%3D">https://alumni-redirect-poc.netlify.app/get/page/subscriptions/signup?catID=1063&mkt_tok=eyJpIjoiWlRFMllqaGtOelpsTnpneiIsInQiOiJ2Tm05UkM3b2VMUHpwYTdsTWVIXC9MRTlYeTdYMFpHR29xcXI3TWczVUhManVQY2EwSDFYdHFqNEI5ZVNcL25HXC9vaEVZVTZwQjNDT0JYd2RlSlVQSFBwaVRrUlluZ3EzQXJSNUNPalNXUVQrT21lSTZTYzV1ZVNCXC91N2ZGaHQ0UHEifQ%3D%3D</Link></p>	
+      <p>Clicks on a link from a Marketo email (our primary means of contacting alums)<a href="/get/page/subscriptions/signup?catID=1063&mkt_tok=eyJpIjoiWlRFMllqaGtOelpsTnpneiIsInQiOiJ2Tm05UkM3b2VMUHpwYTdsTWVIXC9MRTlYeTdYMFpHR29xcXI3TWczVUhManVQY2EwSDFYdHFqNEI5ZVNcL25HXC9vaEVZVTZwQjNDT0JYd2RlSlVQSFBwaVRrUlluZ3EzQXJSNUNPalNXUVQrT21lSTZTYzV1ZVNCXC91N2ZGaHQ0UHEifQ%3D%3D">https://alumni-redirect-poc.netlify.app/get/page/subscriptions/signup?catID=1063&mkt_tok=eyJpIjoiWlRFMllqaGtOelpsTnpneiIsInQiOiJ2Tm05UkM3b2VMUHpwYTdsTWVIXC9MRTlYeTdYMFpHR29xcXI3TWczVUhManVQY2EwSDFYdHFqNEI5ZVNcL25HXC9vaEVZVTZwQjNDT0JYd2RlSlVQSFBwaVRrUlluZ3EzQXJSNUNPalNXUVQrT21lSTZTYzV1ZVNCXC91N2ZGaHQ0UHEifQ%3D%3D</a></p>	
       <p><strong>Expected Result:</strong></p>
       <p>The user is redirected to the legacy site with the url parameters preserved</p>
       <p><strong>Why?</strong></p>
@@ -72,7 +72,7 @@ const IndexPage = (props) => {
       <hr />
       <p>&nbsp;</p>
       <h3>Scenario #7</h3>
-      <p>The user goes to <Link to="/get/page/life-long-learning/learn-join?utm_source=e-alert&utm_medium=email&utm_content=learn-join">https://alumni-redirect-poc.netlify.app/get/page/life-long-learning/learn-join?utm_source=e-alert&utm_medium=email&utm_content=learn-join</Link></p>	
+      <p>The user goes to <a href="/get/page/life-long-learning/learn-join?utm_source=e-alert&utm_medium=email&utm_content=learn-join">https://alumni-redirect-poc.netlify.app/get/page/life-long-learning/learn-join?utm_source=e-alert&utm_medium=email&utm_content=learn-join</a></p>	
       <p><strong>Expected Result:</strong></p>
       <p>The user is redirected to the legacy site with the url parameters preserved</p>
       <p><strong>Why?</strong></p>
