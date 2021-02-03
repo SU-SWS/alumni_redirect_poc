@@ -1,6 +1,5 @@
 import React from "react"
-import { navigate } from "gatsby"
-import { useLocation } from "@reach/router";
+import { useLocation, redirectTo } from "@reach/router";
 import Layout from "../components/layout";
 
 // markup
@@ -9,8 +8,7 @@ const NotFoundPage = () => {
   const windowGlobal = typeof window !== 'undefined'
 
   if (windowGlobal) {
-    navigate("https://alumni.stanford.edu" + location.pathname + "?" + location.search);
-    return null
+    redirectTo("https://pg-dev.stanford.edu" + location.pathname + "?" + location.search);
   }
 
   return (

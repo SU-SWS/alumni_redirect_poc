@@ -37,3 +37,13 @@
   from = "/redirect/page-2"
   to = "/page-2"
   status = 301
+
+[[redirects]]
+  from = "/get/page/help/contact-us"
+  to = "/contact-us"
+  status = 301
+
+[[redirects]]
+  from = "/get/page/life-long-learning/book-overview"
+  to = "/book-overview"
+  status = 301
