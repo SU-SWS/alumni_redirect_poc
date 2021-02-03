@@ -1,5 +1,6 @@
-import React from "react"
-import { useLocation, redirectTo } from "@reach/router";
+import React from "react";
+import { useLocation } from "@reach/router";
+import { Redirect } from "gatsby";
 import Layout from "../components/layout";
 
 // markup
@@ -8,8 +9,10 @@ const NotFoundPage = () => {
   const windowGlobal = typeof window !== 'undefined'
 
   if (windowGlobal) {
-    window.location.href("https://alumni.stanford.edu" + location.pathname + "?" + location.search);
-    return null
+    let wherto = "https://alumni.stanford.edu" + location.pathname + "?" + location.search;
+    return (
+      <Redirect to={wherto} />
+    )
   }
 
   return (
