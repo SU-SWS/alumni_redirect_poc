@@ -1,6 +1,6 @@
 import React, { useLayoutEffect} from "react";
 import { useLocation } from "@reach/router";
-import Layout from "../components/layout";
+import { Redirect } from "gatsby-link"
 
 // markup
 const NotFoundPage = () => {
@@ -14,10 +14,7 @@ const NotFoundPage = () => {
 
   return (
     browser && (
-      <Layout>
-        <h1>You have reached the 404 page.</h1>
-        <p>This page should redirect you to pg-dev.stanford.edu.</p>
-      </Layout>
+      <Redirect to={"https://alumni.stanford.edu" + location.pathname + "?" + location.search} />
     )
   )
 }
