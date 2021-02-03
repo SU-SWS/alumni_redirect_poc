@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "@reach/router";
-import { Redirect } from "gatsby";
+import { Redirect } from "gatsby-link";
 import Layout from "../components/layout";
 
 // markup
