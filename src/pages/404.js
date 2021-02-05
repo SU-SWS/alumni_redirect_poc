@@ -5,7 +5,7 @@ import { useLocation } from "@reach/router";
 const NotFoundPage = () => {
   const location = useLocation();
   const browser = typeof window !== "undefined" && window;
-  const dest = "https://alumni.stanford.edu" + location.pathname + location.search
+  const dest = "https://pg-dev.stanford.edu" + location.pathname + location.search
 
   useLayoutEffect(() => {
     window.location = dest;
