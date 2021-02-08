@@ -53,3 +53,4 @@
   from = "*"
   to = "https://pg-dev.stanford.edu/:splat"
   status = 301
+  headers = { X-From = "Netlify" }
