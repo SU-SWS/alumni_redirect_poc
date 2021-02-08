@@ -21,7 +21,7 @@
     Strict-Transport-Security = "max-age=2592000"
     Permissions-Policy = "vibrate=(), geolocation=(), midi=(), notifications=(), push=(), microphone=(), camera=(), magnetometer=(), gyroscope=(), speaker=(), vibrate=(), fullscreen=()"
 
-# REDIRECTS are located in static/_redirects
+# REDIRECTS are located here
 # ###############################################################################
 [[redirects]]
   from = "/api/*"
@@ -46,4 +46,10 @@
 [[redirects]]
   from = "/get/page/life-long-learning/book-overview"
   to = "/book-overview"
+  status = 301
+
+# Wildcard for anything. 
+[[redirects]]
+  from = "*"
+  to = "https://pg-dev.stanford.edu/:splat"
   status = 301
