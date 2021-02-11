@@ -8,7 +8,7 @@ const IndexPage = (props) => {
     <Layout>
       <p>&nbsp;</p>
       <h1>Home Page</h1>
-      <p>This is the home page. To test out the redirect logic you can follow along the below scenarios. We will use the domain https://alumni-redirect-poc.netlify.app in replacement of https://alumni.stanford.edu for this POC and https://pg-dev.stanford.edu in replacement of legacy-alumni.stanford.edu.</p>
+      <p>This is the home page. To test out the redirect logic you can follow along the below scenarios. We will use the domain https://alumni-redirect-poc.netlify.app in replacement of https://alumni.stanford.edu for this POC and https://alumni.stanford.edu in replacement of legacy-alumni.stanford.edu.</p>
 
       <h2>Domain Level</h2>
       <hr />
@@ -43,9 +43,9 @@ const IndexPage = (props) => {
       <h3>Scenario #4</h3>
       <p>The user goes to <a href="/get/page/directory/search">https://alumni-redirect-poc.netlify.app/get/page/directory/search</a></p>	
       <p><strong>Expected Result:</strong></p>
-      <p>User is asked to login if they haven't already. User is taken to the directory page with a legacy URL, e.g. https://pg-dev.stanford.edu/get/page/directory/search</p>
+      <p>User is asked to login if they haven't already. User is taken to the directory page with a legacy URL, e.g. https://alumni.stanford.edu/get/page/directory/search</p>
       <p><strong>Why?</strong></p>
-      <p>This URL generated a 404 on the new site (https://alumni-redirect-poc.netlify.app), so it was redirected to the old site at https://pg-dev.stanford.edu. The page was found on the old site, so the user was taken to the page</p>
+      <p>This URL generated a 404 on the new site (https://alumni-redirect-poc.netlify.app), so it was redirected to the old site at https://alumni.stanford.edu. The page was found on the old site, so the user was taken to the page</p>
       <p><strong>Comments</strong></p>
       <p>Ideal state would be that this is a pass through and user goes directly to new page; want to avoid flow where user logins to access a page that is not there.</p>
       
@@ -54,7 +54,7 @@ const IndexPage = (props) => {
       <p><strong>Expected Result:</strong></p>
       <p>User is taken to the 404 page on the old site</p>
       <p><strong>Why?</strong></p>
-      <p>This URL generated a 404 on the new site (https://alumni-redirect-poc.netlify.app), so it was redirected to the old site at https://pg-dev.stanford.edu. It also generated a 404 on the old site, so the user gets the old 404 page.</p>
+      <p>This URL generated a 404 on the new site (https://alumni-redirect-poc.netlify.app), so it was redirected to the old site at https://alumni.stanford.edu. It also generated a 404 on the old site, so the user gets the old 404 page.</p>
 
       <h2>Marketo Email Link</h2>
       <hr />
